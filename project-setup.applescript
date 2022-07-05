@@ -1,6 +1,8 @@
 #!/usr/bin/osascript
 
-set folderName to "~/Desktop"
+set folderName to "~/Desktop/"
+set inspectUrl to "chrome://inspect/#devices"
+set projectUrl to "https://github.com/ogty"
 
 tell application "Google Chrome"
     activate
@@ -9,7 +11,7 @@ tell application "Google Chrome"
     tell first window
         set n to active tab index
         set theUrl to URL of active tab
-        set myTab to make new tab at after tab n with properties {URL:"chrome://inspect"}
+        set myTab to make new tab at after tab n with properties {URL: inspectUrl}
     end tell
 end tell
 
@@ -30,6 +32,6 @@ tell application "Brave"
     tell first window
         set n to active tab index
         set theUrl to URL of active tab
-        set myTab to make new tab at after tab n with properties {URL:"https://github.com/ogty"}
+        set myTab to make new tab at after tab n with properties {URL: projectUrl}
     end tell
 end tell

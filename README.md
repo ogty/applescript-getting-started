@@ -1,1 +1,1 @@
-# applescript-gs
+# AppleScript Getting Started
